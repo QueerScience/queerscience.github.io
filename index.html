@@ -9,13 +9,19 @@
       #header {  float:left; }
       #logo {max-width:30em;}
       img { height:200px; display:block;}
-      #nav { color:#828282;  }
-      #nav ul { padding:0; list-style-type:none; justify-content:center; display:flex;}
-      #nav li { float:left;padding: 0em 1em;}
+      #nav {   }
+      #nav ul { padding:0; list-style-type:none; font-size:none; text-align:center; font-weight:bold; font-family: Sans Serif;}
+      #nav li { }
       #content { overflow:hidden; padding-left:5em; }
       body { display:block; margin:1em; padding:0; font:1em san-serif; }
       a { text-decoration:none;}
       a:hover { text-decoration:underline; }
+      .r1 {color:#d8222c;}
+      .r2 {color:#e16526;}
+      .r3 {color:#098442;}
+      .r4 {color:#18a4b2;}
+      .r5 {color:#2e378e;}
+      .r6 {color:#272867;}
       @media only screen and (max-width: 36em) {
 	      #header {float:none;}
 	      #logo img {margin:auto;}
@@ -33,7 +39,20 @@
         </a>
       </div>
       <div id="nav">
-	      <ul><li><a href="news.html">News</a></li><li><a href="zine">Zine</a></li><li><a href="support">Support</a></li></ul>
+	      <ul>
+		      <li><a href="news.html" class="r1">News</a></li>
+		      <li><a href="zine" class="r2">Zine</a></li>
+		      <li><a href="support" class="r3">Sponsors</a></li>
+		      <li><a href="support" class="r4">Support</a></li>
+	      </ul>
+	      <ul>
+		      <strong>Other sites</strong>
+		      <li><a href="#" class="r5">University of Minnesota</a></li>
+		      <li><a href="#" class="r6">University of XYZ</a></li>
+		      <li><a href="#" class="r1">Twitter</a></li>
+		      <li><a href="#" class="r2">Facebook</a></li>
+
+	      </ul>
       </div>
     </div>
     <div id="content">
