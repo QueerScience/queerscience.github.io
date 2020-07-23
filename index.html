@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!vDOCTYPE html>
 <html>
   <head lang="en">
     <meta charset="utf-8"/>
@@ -7,11 +7,11 @@
       h1 { display: none; }
       #container { max-width:900px; margin:auto; width:100%; }
       #header {  float:left; }
-      #logo {max-width:30em;}
       img { height:200px; display:block;}
       #nav {   }
       #nav ul { padding:0; list-style-type:none; font-size:none; text-align:center; font-weight:bold; font-family: Sans Serif;}
       #nav li { }
+      #menu { display:none; margin: auto; padding:50%; text-align:center; padding:1em;}
       #content { overflow:hidden; padding-left:2em; }
       body { display:block; margin:1em; padding:0; font:1em san-serif; }
       h2 { margin:0; }
@@ -23,11 +23,16 @@
       .r4, a.r1:hover {color:#18a4b2;}
       .r5, a.r2:hover {color:#2e378e;}
       .r6, a.r3:hover {color:#272867;}
-      @media only screen and (max-width: 36em) {
+      @media only screen and (max-width: 750px) {
 	      #header {float:none;}
 	      #logo img {margin:auto;}
 	      #content{padding:0;}
+	      #nav {display:none;}
+	      #menu {display:block;}
+	      .resolution-check {display:block;}
+
       }
+      .hide {display:none;}
     </style>
   </head>
   <body>
@@ -39,7 +44,14 @@
           <h1>Queer Science</h1>
         </a>
       </div>
-      <div id="nav">
+      <div id="nav-outer">
+	      <div id="menu">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <a href="javascript:void(0);" class="icon" onclick="menuJS()">
+    <i class="fa fa-bars"></i>
+  </a>
+	      </div>
+      <div id="nav" class="show">
        <ul>
          <li><a href="news.html" class="r1">News</a></li>
          <li><a href="zine" class="r2">Zine</a></li>
@@ -56,6 +68,7 @@
        </ul>
      </div>
     </div>
+    </div>
     <div id="content">
 	    <h2 class="r6">What is Queer Science?</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pharetra leo a arcu facilisis, at imperdiet nisl rutrum. Nulla porta turpis dictum urna tempor luctus. Aliquam molestie pretium odio, id suscipit mi tristique nec. Ut bibendum aliquam imperdiet. Curabitur pulvinar, lacus vel vehicula tincidunt, lorem arcu blandit lorem, imperdiet rhoncus purus nisl at eros. Aliquam arcu sem, condimentum eget ipsum sed, consectetur laoreet eros. Morbi at sollicitudin lorem. Nullam ut rhoncus risus. Aenean hendrerit sodales viverra. Sed at justo in ex accumsan fermentum. Nulla blandit sed ante in lacinia. In hac habitasse platea dictumst. Proin at molestie mauris. Nullam luctus risus a porttitor imperdiet.</p>
@@ -67,5 +80,24 @@
 <iframe src="https://www.google.com/maps/d/embed?mid=1US8kt_OlYMffR1KaaEvaqkhYUrs" width="100%" height="400px"></iframe>
     </div>
   </div>
+	<script>
+if ($('.resolution-check').is(':visible')) {
+
+	menuJS()
+
+}
+	</script>
+
+<script>
+function menuJS() {
+  var x = document.getElementById("nav");
+  if (window.getComputedStyle(x).display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
   </body>
+
 </html>
